@@ -1,4 +1,4 @@
-# A Neural Network Approach for Online Nonlinear Neyman-Pearson Classification
+# Feature generation from video using yolo and DAE
 This is the repo for detecting objects from UCSDped2 dataset, generate 32 dimensional latent variables using denoising autoencoder as explained in [1]. I have also used some portion of the code available under [2], which is a not official implementation of [1].
 Flow diagram of the system is given below:
 <img src="figures/flow_diagram.png">
