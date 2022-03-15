@@ -1,5 +1,5 @@
 # Feature generation from video using yolo and DAE
-This is the repo for detecting objects from UCSDped2 dataset, generate 32 dimensional latent variables using denoising autoencoder as explained in [1]. I have also used some portion of the code available under [2], which is a not official implementation of [1].
+This is the repo for detecting objects from UCSDped2 dataset, generate 33 dimensional latent variables using denoising autoencoder as explained in [1]. I have also used some portion of the code available under [2], which is a not official implementation of [1].
 Flow diagram of the system is given below:
 <img src="figures/flow_diagram.png">
 
@@ -10,9 +10,10 @@ Yolov5 folder is the git repo for yolo object detection which can be cloned from
 Important Note: The folders mentioned above should be available in your repo in order to execute the full pipeline.
 
 # Running the Pipeline
-create_yolo_objects jupyter notebook detects images using yolov5 and saved the scaled objects under output/scaled_objects.
-DAE notebook reads the scaled objects created by aforementioned notebook and maps them to 32 dimensional latent variables under.
-32 dimensional feature is saved under output/ped2.mat
+create_yolo_objects jupyter notebook detects images using yolov5 and saved the scaled objects under output/$raw_data_dir_name$/scaled_objects.
+Note that $raw_data_dir_name$ is the file containing the raw image data. Proposed tool is creates the same features under the same output folder.
+DAE notebook reads the scaled objects created by aforementioned notebook and maps them to 33 dimensional latent variables under.
+33 dimensional feature is saved under output/$raw_data_dir_name$/$raw_data_dir_name$_dae.mat
 
 Thanks!
 Basarbatu Can
